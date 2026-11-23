@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:background="#F5F7FB">
+
+    <FrameLayout android:layout_width="256dp" android:layout_height="match_parent" android:background="#FFFFFF" android:elevation="4dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="false">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView android:id="@+id/salutation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Traffic Scotland" android:textColor="#142B49" android:textStyle="bold" android:textSize="21sp" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Live traffic information" android:textColor="#64748B" android:textSize="11sp" android:layout_marginBottom="18dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CATEGORIES" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp" android:layout_marginBottom="7dp"/>
+                    <Button android:id="@+id/startButton" android:layout_width="match_parent" android:layout_height="44dp" android:text="Unplanned" android:textAllCaps="false" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="13sp" android:backgroundTint="#24559A" android:insetTop="0dp" android:insetBottom="0dp" android:layout_marginBottom="8dp"/>
+                    <Button android:id="@+id/roadworksButton" android:layout_width="match_parent" android:layout_height="44dp" android:text="Roadworks" android:textAllCaps="false" android:textColor="#24559A" android:textStyle="bold" android:textSize="13sp" android:backgroundTint="#E6EFFA" android:insetTop="0dp" android:insetBottom="0dp" android:layout_marginBottom="16dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DISPLAY" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp" android:layout_marginBottom="7dp"/>
+                    <Button android:id="@+id/mapButton" android:layout_width="match_parent" android:layout_height="46dp" android:text="View Map" android:textAllCaps="false" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="13sp" android:backgroundTint="#142B49" android:insetTop="0dp" android:insetBottom="0dp"/>
+                </LinearLayout>
+            </ScrollView>
+            <TextView android:id="@+id/acknowledgement" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Contains Traffic Scotland data" android:textColor="#64748B" android:textSize="10sp" android:padding="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/landscapeDetailsPanel" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#FFFFFF" android:visibility="gone" android:clickable="true" android:elevation="10dp" android:paddingTop="8dp" android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingBottom="8dp">
+
+            <LinearLayout android:id="@+id/landscapeDetailsHandle" android:layout_width="match_parent" android:layout_height="32dp" android:gravity="top|center_horizontal" android:paddingTop="8dp" android:clickable="true" android:focusable="true" android:contentDescription="Swipe down or tap to close event details">
+                <View android:layout_width="44dp" android:layout_height="4dp" android:background="#CBD5E1"/>
+            </LinearLayout>
+            <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="false" android:overScrollMode="ifContentScrolls">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@+id/landscapeDetailsCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UNPLANNED EVENTS" android:textColor="#24559A" android:textStyle="bold" android:textSize="10sp"/>
+                    <TextView android:id="@+id/landscapeDetailsRoad" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="M74" android:textColor="#142B49" android:textStyle="bold" android:textSize="25sp" android:layout_marginTop="7dp"/>
+                    <TextView android:id="@+id/landscapeDetailsDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Event description" android:textColor="#142B49" android:textSize="13sp" android:lineSpacingExtra="3dp" android:layout_marginTop="8dp"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E2E8F0" android:layout_marginTop="12dp" android:layout_marginBottom="10dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SEVERITY / DELAY" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp"/>
+                    <TextView android:id="@+id/landscapeDetailsSeverity" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Not provided" android:textColor="#142B49" android:textSize="13sp" android:layout_marginTop="3dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="EVENT TYPE" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp" android:layout_marginTop="12dp"/>
+                    <TextView android:id="@+id/landscapeDetailsType" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Not provided" android:textColor="#142B49" android:textSize="13sp" android:layout_marginTop="3dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="START" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp" android:layout_marginTop="12dp"/>
+                    <TextView android:id="@+id/landscapeDetailsStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Not provided" android:textColor="#142B49" android:textSize="13sp" android:layout_marginTop="3dp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="END" android:textColor="#64748B" android:textStyle="bold" android:textSize="10sp" android:layout_marginTop="12dp"/>
+                    <TextView android:id="@+id/landscapeDetailsEnd" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Not provided" android:textColor="#142B49" android:textSize="13sp" android:layout_marginTop="3dp"/>
+                    <TextView android:id="@+id/landscapeDetailsLocationToggle" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:text="Location details ▾" android:textColor="#24559A" android:textStyle="bold" android:textSize="13sp" android:clickable="true" android:focusable="true"/>
+                    <TextView android:id="@+id/landscapeDetailsCoordinates" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS coordinates" android:textColor="#64748B" android:textSize="11sp" android:visibility="gone" android:paddingBottom="8dp"/>
+                </LinearLayout>
+            </ScrollView>
+            <Button android:id="@+id/landscapeDetailsMapButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:text="Show on Map" android:textAllCaps="false" android:textStyle="bold" android:textSize="13sp" android:textColor="#FFFFFF" android:backgroundTint="#24559A" android:insetTop="0dp" android:insetBottom="0dp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#F5F7FB">
+        <ScrollView android:id="@+id/rawDataScroll" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:padding="16dp">
+            <TextView android:id="@+id/rawDataDisplay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Loading Traffic Scotland information..." android:textColor="#142B49" android:textSize="15sp"/>
+        </ScrollView>
+        <FrameLayout android:id="@+id/eventListContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+        <FrameLayout android:id="@+id/mapContainer" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>
